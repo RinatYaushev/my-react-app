@@ -22,12 +22,11 @@ export class Counter extends Component {
     };
 
     render () {
-        const { onClick } = this;
         const { count } = this.state;
 
         return (
             <div>
-                <Button color={'#48e85d'} onClick={onClick} text={'Click to increase count'} />
+                <Button isTeller={false} onClick={this.onClick} text={'Click to increase count'} />
                 <CounterText count={count} />
             </div>
         )
