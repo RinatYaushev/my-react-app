@@ -1,34 +1,52 @@
 import React, { Component } from 'react';
+import { Teller } from "./teller";
+import { Button } from "./button";
 
-function Hello() {
-    return <h1>Hello World!</h1>;
-}
+export const Hello = () => {
+    return <h3>Hello World!</h3>;
+};
 
-class SuperHello extends Component {
+export class SuperHello extends Component {
     state = {
-        color: '#ffffff'
+        color: '#61dafb',
+        text: 'Click me!'
     };
-    toggleColor = () => {
+
+    onClick = () => {
+        let textAfterClick = [
+            'Wow, that was great!, Do it again',
+            'Thank you, and now once more',
+            'Try again!',
+            'One more time...',
+            'More clicks needed',
+            'Click this text again',
+            'Are you sure, you clicked it?',
+            'Something went wrong. Please try again'
+        ];
         this.setState(({ color }) => ({
-            color: color === '#ffffff' ? '#ff0000' : '#ffffff',
+            color: color === '#61dafb' ? '#ff0000' : '#61dafb',
+            text: textAfterClick[Math.floor(Math.random() * textAfterClick.length)]
         }))
     };
+
     render () {
-        const  { color } = this.state;
+        const { color } = this.state;
+        const { text } = this.state;
+        const { onClick } = this;
 
         return (
-            <h1 style={{color: color}} onClick={this.toggleColor}>Super Hello World!</h1>
+            <div>
+                <Button color={color} onClick={onClick} text={text} />
+                <Teller color={color} />
+            </div>
         )
     }
 }
 
-function Welcome() {
+export const Welcome = ({ children }) => {
     return (
-        <div>
-            <Hello />
-            <SuperHello />
+        <div className="Hello-world">
+            {children}
         </div>
     )
-}
-
-export default Welcome
+};
