@@ -4,7 +4,7 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 20vmin;
 }
 
 .App-header {
@@ -20,6 +20,27 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.My-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.Hello-world {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Funny-button {
+    padding: 20px;
+    background-color: #666666;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 @keyframes App-logo-spin {
