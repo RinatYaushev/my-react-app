@@ -15,14 +15,15 @@ class App extends Component {
     };
 
     render() {
-        const { children, child } = this.props;
+        const { children, counter, tabs } = this.props;
 
         return (
             <div className="App">
                 <header className="App-header">
                     <div className="My-content">
                         {children}
-                        {child}
+                        {counter}
+                        {tabs}
                     </div>
                     <img src={logo} className="App-logo" alt="logo" />
                     <p>

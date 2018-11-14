@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import { Welcome, Hello, SuperHello } from './components/welcome'
 import { Counter } from './components/counter'
+import { Tabs } from './components/tabs'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <App
-        child={<Counter />}>
+        counter={<Counter />}
+        tabs={<Tabs />}>
         <Welcome>
             <Hello />
             <SuperHello />
