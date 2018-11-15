@@ -2,7 +2,7 @@ import React  from 'react';
 import { Button } from "./button";
 
 export const Hello = () => {
-    return <h3>Hello World!</h3>;
+    return <h5>Hello World!</h5>;
 };
 
 export const SuperHello = () => {

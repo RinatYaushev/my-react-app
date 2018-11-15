@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Teller } from './teller';
 import PropTypes from "prop-types";
 
@@ -65,10 +65,10 @@ export class Button extends Component {
 
         if (isTeller) {
             return (
-                <div>
+                <Fragment>
                     <button style={{color: color}} className="Funny-button" onClick={this.onClick}>{text}</button>
                     <Teller color={color} />
-                </div>
+                </Fragment>
             )
         }
 

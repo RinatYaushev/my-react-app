@@ -1,12 +1,12 @@
-import React  from 'react';
+import React, { Fragment }  from 'react';
 import PropTypes from 'prop-types';
 
 export const Teller = ({ color }) => {
     return (
-        <div>
-            <h4>Current button text color is</h4>
-            <h4 style={{color}}>{color}</h4>
-        </div>
+        <Fragment>
+            <h5>Current button text color is</h5>
+            <h5 style={{color}}>{color}</h5>
+        </Fragment>
     )
 };
 
