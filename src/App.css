@@ -41,6 +41,8 @@
     border: none;
     cursor: pointer;
     font-size: 20px;
+    width: 30%;
+    align-self: center;
 }
 
 .Tab-wrapper {
