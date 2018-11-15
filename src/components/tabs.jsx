@@ -15,7 +15,12 @@ class Tab extends Component {
 }
 
 const TabContent = ({ activeTab }) => {
-    return <div>{`Tab content from tab ${activeTab}`}</div>
+    switch (activeTab) {
+        case 1: return <div>{`This is content from tab #${activeTab}`}</div>;
+        case 2: return <div>{`And here is something from tab ${activeTab}`}</div>;
+        case 3: return <div>{`Finally tab ${activeTab} content arrived`}</div>;
+        default: return <div>!</div>;
+    }
 };
 
 export class Tabs extends Component {
